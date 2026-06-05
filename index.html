@@ -277,7 +277,7 @@
         const form = document.getElementById("qaForm");
         form.addEventListener("submit", function(e) {
             e.preventDefault();
-            document.getElementById("submitBtn").innerText = "...";
+            document.getElementById("submitBtn").innerText = "sending...";
             fetch(form.action, { method: "POST", body: new FormData(form), headers: { 'Accept': 'application/json' } })
             .then(() => { form.classList.add("hidden"); document.getElementById("thankYouMsg").classList.remove("hidden"); });
         });
